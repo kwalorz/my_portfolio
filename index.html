@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/277a2d5b13.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Home</title>
   </head>
   <body>
@@ -28,8 +33,8 @@
       </video>
     </header>
     <div id="about-section" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
+      <div class="modal-content-about">
+        <span class="close close-about">&times;</span>
         <div class="about-content">
           <img src="img/goku.jpg" alt="goku" />
           <div class="about-text">
@@ -45,28 +50,38 @@
       </div>
     </div>
     <div id="contact-section" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
+      <div class="modal-content-contact">
+        <span class="close close-contact">&times;</span>
         <div class="contact-content">
-          <form action="">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" />
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="@youremail.com"
-            />
-            <label for="phone">Phone</label>
-            <input
-              type="number"
-              name="phone"
-              id="phone"
-              placeholder="555-555-5555"
-            />
-            <button class="btn">Submit</button>
-          </form>
+          <h1>Conatct Me</h1>
+          <div class="contact-info">
+            <form action="">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="@youremail.com"
+              />
+              <label for="phone">Phone</label>
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                placeholder="555-555-5555"
+              />
+              <button class="btn">Submit</button>
+            </form>
+            <div class="border-right"></div>
+            <div class="contact-icons">
+              <i class="fas fa-phone-square fa-3x"></i>
+              <a href="mailto:kmwalorz@gmail.com?"
+                ><i class="fas fa-envelope fa-3x"></i
+              ></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
