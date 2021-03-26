@@ -13,7 +13,7 @@ header {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   right: 0;
@@ -28,7 +28,8 @@ nav ul {
   display: flex;
   flex-direction: column;
   padding-top: 10rem;
-  padding-left: 8rem;
+  padding-left: 35%;
+  padding-right: 35%;
 }
 nav ul li {
   text-decoration: none;
@@ -54,7 +55,7 @@ video {
   z-index: -1;
 }
 
-/* Modal windows*/
+/*******************Modal windows************************/
 
 .modal {
   display: none;
@@ -83,7 +84,7 @@ video {
   cursor: pointer;
 }
 
-/*About Section*/
+/************************About Section*******************************/
 
 .modal-content-about {
   background-color: #fefefe;
@@ -116,7 +117,41 @@ video {
   height: 100%;
 }
 
-/*Contact*/
+/*****************Resume************************/
+.modal-content-resume {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 25%;
+  height: 25%;
+}
+
+.resume-content {
+  margin: auto;
+}
+
+.resume-content h1 {
+  font-size: 1.4rem;
+  margin-top: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.resume-btn {
+  padding: 1rem;
+  background-color: rgb(36, 169, 247);
+  border-radius: 10px;
+  color: #ffff;
+  text-decoration: none;
+  background: -webkit-linear-gradient(top, #009afa, #b4d7ed);
+  background: -moz-linear-gradient(top, #009afa, #b4d7ed);
+  background: -ms-linear-gradient(top, #009afa, #b4d7ed);
+  background: -o-linear-gradient(top, #009afa, #b4d7ed);
+}
+
+/***********************Contact***************************/
 
 .modal-content-contact {
   background-color: #fefefe;
@@ -168,5 +203,5 @@ form button {
   margin-left: 2rem;
 }
 .fas {
-  color: rgb(132, 169, 190);
+  color: rgb(36, 169, 247);
 }
