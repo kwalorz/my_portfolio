@@ -54,7 +54,10 @@
         <span class="close">&times;</span>
         <div class="resume-content">
           <h1>Download My Resume</h1>
-          <a class="resume-btn" href="./directory/yourfile.pdf" download
+          <a
+            class="resume-btn"
+            href="./img/KevinWalorz_resume.pdf"
+            download="kevin-walorz_resume"
             >PDF
           </a>
         </div>
@@ -78,19 +81,31 @@
               />
               <label for="phone">Phone</label>
               <input
-                type="number"
+                type="tel"
                 name="phone"
                 id="phone"
                 placeholder="555-555-5555"
               />
+              <label for="message">Leave a message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="40"
+                rows="4"
+                autofocus
+              ></textarea>
               <button class="btn">Submit</button>
             </form>
             <div class="border-right"></div>
             <div class="contact-icons">
-              <i class="fas fa-phone-square fa-3x"></i>
-              <a href="mailto:kmwalorz@gmail.com?"
-                ><i class="fas fa-envelope fa-3x"></i
-              ></a>
+              <div class="phone">
+                <i class="fas fa-phone-square fa-3x"></i>
+                <span>781-985-4659</span>
+              </div>
+              <div class="email">
+                <i class="fas fa-envelope fa-3x"></i>
+                <a href="mailto:kmwalorz@gmail.com?">kmwalorz@gmail.com</a>
+              </div>
             </div>
           </div>
         </div>

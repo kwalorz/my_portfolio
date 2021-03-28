@@ -119,6 +119,7 @@ video {
 
 /*****************Resume************************/
 .modal-content-resume {
+  position: relative;
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -128,27 +129,31 @@ video {
   height: 25%;
 }
 
-.resume-content {
-  margin: auto;
-}
-
 .resume-content h1 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-top: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .resume-btn {
+  position: absolute;
+  left: 40%;
   padding: 1rem;
-  background-color: rgb(36, 169, 247);
+  /*background-color: rgb(36, 169, 247);*/
   border-radius: 10px;
   color: #ffff;
   text-decoration: none;
-  background: -webkit-linear-gradient(top, #009afa, #b4d7ed);
-  background: -moz-linear-gradient(top, #009afa, #b4d7ed);
-  background: -ms-linear-gradient(top, #009afa, #b4d7ed);
-  background: -o-linear-gradient(top, #009afa, #b4d7ed);
+  box-shadow: 1px 1px 1px 1px #333;
+  background: -webkit-linear-gradient(top, #009afa, #7c95a5);
+  background: -moz-linear-gradient(top, #009afa, #7c95a5);
+  background: -ms-linear-gradient(top, #009afa, #7c95a5);
+  background: -o-linear-gradient(top, #009afa, #7c95a5);
+}
+
+.resume-btn:hover {
+  background: #007ecc;
+  opacity: 0.9;
 }
 
 /***********************Contact***************************/
@@ -185,23 +190,60 @@ form input {
   margin-bottom: 0.25rem;
 }
 
+form textarea {
+  resize: none;
+}
+
 form button {
-  margin-top: 0.5rem;
-  width: 30%;
-  text-align: center;
+  margin: 1rem auto;
+  width: 35%;
+  padding: 0.4rem;
+  color: #fff;
+  background: rgb(36, 169, 247);
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: rgba(36, 169, 247, 0.8);
 }
 
 .border-right {
   border-right: 2px solid black;
-  height: 8rem;
+  height: 16rem;
   margin-left: 2rem;
 }
 
 .contact-icons {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 3rem;
   margin-left: 2rem;
 }
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.phone i {
+  margin-right: 1.2rem;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+}
+
+.email i {
+  margin-right: 1rem;
+}
+
+.email a {
+  color: #000;
+}
+
 .fas {
   color: rgb(36, 169, 247);
+  margin-bottom: 1.2rem;
 }
