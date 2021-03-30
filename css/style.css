@@ -100,11 +100,21 @@ video {
 }
 
 .project-window > img {
-  margin: 5%;
-  height: 30%;
-  width: 30%;
+  border: 1px solid #333;
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);
+  margin: 6%;
+  height: 200px;
+  width: 400px;
 }
 
+.project-text {
+  margin-top: 5%;
+}
+
+.project-text > h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
 /************************About Section*******************************/
 
 .modal-content-about {
