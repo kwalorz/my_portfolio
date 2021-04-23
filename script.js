@@ -1,12 +1,3 @@
-//////////////////////Navbar///////////////////////////////////////
-const navbar = document.querySelector("nav");
-
-window.onload = (e) => {
-  setTimeout(() => {
-    navbar.style.transition = "all ease-in 1.5s";
-    navbar.style.transform = "translateX(0%)";
-  }, 1000);
-};
 /////////////////////Modal Windows////////////////////////////////
 
 const modalProjects = document.querySelector("#projects-section");

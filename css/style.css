@@ -11,7 +11,8 @@ body {
 header {
   height: 100vh;
   width: 100%;
-  background-image: url(/img/background_img.svg);
+  background: url(/img/background_header.png) no-repeat center;
+  overflow: hidden;
 }
 
 nav {
@@ -19,11 +20,9 @@ nav {
   right: 0;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
-  width: 25%;
-  transform: translateX(100%);
+  width: 100%;
 }
 
 nav ul {
