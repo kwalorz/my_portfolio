@@ -12,7 +12,7 @@ header {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #000000 url(/img/Background_portfolio.png) center center / cover
+  background: #000000 url(../img/gradient_blue.png) center center / cover
     no-repeat;
 }
 
@@ -35,12 +35,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #f2f2f2;
-  font-size: 25px;
+  font-size: 22px;
   transition: all 0.2s ease-in-out;
 }
 
 nav ul li a:hover {
-  font-size: 27px;
+  font-size: 25px;
 }
 
 /*******************Modal windows************************/
