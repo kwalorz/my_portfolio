@@ -12,7 +12,8 @@ header {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #000000 url(../img/background.png) center center / cover no-repeat;
+  background: #000000 url(../img/background_portfolio.png) center center / cover
+    no-repeat;
   overflow: hidden;
 }
 
@@ -45,7 +46,7 @@ nav ul li a:hover {
 
 .header_text {
   position: relative;
-  top: 210px;
+  top: 280px;
   left: 300px;
 }
 
