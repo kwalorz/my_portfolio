@@ -12,8 +12,8 @@ header {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #000000 url(../img/gradient_blue.png) center center / cover
-    no-repeat;
+  background: #000000 url(../img/background.png) center center / cover no-repeat;
+  overflow: hidden;
 }
 
 nav {
@@ -41,6 +41,51 @@ nav ul li a {
 
 nav ul li a:hover {
   font-size: 25px;
+}
+
+.header_text {
+  position: relative;
+  top: 210px;
+  left: 300px;
+}
+
+.header_text h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.5;
+}
+
+.header_text h1:nth-child(2) {
+  text-indent: 50px;
+}
+
+.social_icons {
+  position: absolute;
+  bottom: 5%;
+  left: -10px;
+}
+
+.social_icon-container {
+  position: relative;
+  width: 60px;
+  height: 50px;
+  background-color: #180024;
+  display: flex;
+  align-items: center;
+  transition: width 0.2s ease-in-out;
+}
+
+.social_icon-container a {
+  position: absolute;
+  right: 7px;
+  color: #0074ff;
+  font-size: 2.5rem;
+}
+
+.social_icon-container:hover {
+  width: 70px;
+  cursor: pointer;
 }
 
 /*******************Modal windows************************/
@@ -160,26 +205,39 @@ nav ul li a:hover {
 }
 
 .resume-content h1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
   margin-top: 1.8rem;
   margin-bottom: 3rem;
 }
 
 .resume-btn {
-  width: 65px;
   padding: 1rem;
-  border-radius: 10px;
+  opacity: 0.8;
+  border-radius: 20px;
   color: #ffff;
   text-decoration: none;
   box-shadow: 1px 1px 1px 1px #333;
-  background: -webkit-linear-gradient(top, #009afa, #7c95a5);
-  background: -moz-linear-gradient(top, #009afa, #7c95a5);
-  background: -ms-linear-gradient(top, #009afa, #7c95a5);
-  background: -o-linear-gradient(top, #009afa, #7c95a5);
+  background: rgb(24, 0, 36);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#0074ff",GradientType=1);
 }
 
 .resume-btn:hover {
-  background: #007ecc;
   opacity: 0.9;
 }
 
@@ -224,16 +282,37 @@ form textarea {
 }
 
 form button {
+  border: none;
   margin: 1rem auto;
-  width: 35%;
+  width: 100px;
+  height: 40px;
   padding: 0.4rem;
   color: #fff;
-  background: rgb(36, 169, 247);
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: #000 0px 1px 3px 1px;
+  opacity: 0.8;
+  background: rgb(24, 0, 36);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#0074ff",GradientType=1);
 }
 
 form button:hover {
-  background: rgba(36, 169, 247, 0.8);
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 .border-right {
@@ -273,6 +352,21 @@ form button:hover {
 }
 
 .fas {
-  color: rgb(36, 169, 247);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(24, 0, 36, 0.7343312324929971) 33%,
+    rgba(0, 116, 255, 1) 100%
+  );
+
   margin-bottom: 1.2rem;
 }
