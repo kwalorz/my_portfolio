@@ -12,8 +12,8 @@ header {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #000000 url(../img/background_portfolio.png) center center / cover
-    no-repeat;
+  /* background: #000000 url(../img/background_portfolio.png) center center / cover
+    no-repeat; */
   overflow: hidden;
 }
 
@@ -87,6 +87,13 @@ nav ul li a:hover {
 .social_icon-container:hover {
   width: 70px;
   cursor: pointer;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
 }
 
 /*******************Modal windows************************/
