@@ -1,3 +1,14 @@
+////////////////Background Animation//////////////////////////
+
+const animation = bodymovin.loadAnimation({
+  container: document.querySelector(".background_animation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "./data.json",
+  preserveAspectRatio: "none",
+});
+
 /////////////////////Modal Windows////////////////////////////////
 
 const modalProjects = document.querySelector("#projects-section");
