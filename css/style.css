@@ -12,9 +12,9 @@ header {
   position: relative;
   height: 100vh;
   width: 100%;
-  /* background: #000000 url(../img/background_portfolio.png) center center / cover
-    no-repeat; */
-  /* overflow: hidden; */
+  background: #000000 url(../img/background_pinks_blues.png) center center /
+    cover no-repeat;
+  overflow: hidden;
 }
 
 .background_animation {
