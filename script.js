@@ -1,3 +1,17 @@
+///////////////////Header Animations////////////////////////////
+window.onload = function () {
+  const headerGlass = document.querySelector(".header_glass");
+  const headerAnimation = document.querySelectorAll(".header_animation");
+
+  headerGlass.style.transform = "scale(1)";
+  headerGlass.style.transition = "all 1s ease-in-out";
+
+  headerAnimation.forEach(function (seq, i) {
+    seq.style.transform = "translateX(0%)";
+    seq.style.transition = `all 1s ease-in-out ${i + 1}s`;
+    seq.style.animation = `fadeIn linear ${i + 6}s`;
+  });
+};
 /////////////////////Modal Windows////////////////////////////////
 
 const modalProjects = document.querySelector("#projects-section");

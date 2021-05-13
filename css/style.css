@@ -54,6 +54,7 @@ nav ul li a:hover {
 
 .header_glass {
   display: inline-block;
+  transform: scale(0);
   background: rgba(255, 255, 255, 0.2);
   padding: 3rem;
   border-radius: 3rem;
@@ -76,6 +77,19 @@ nav ul li a:hover {
 
 .header_glass h1:nth-child(2) {
   text-indent: 50px;
+}
+
+.header_animation {
+  transform: translateX(-250%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .social_icons {
