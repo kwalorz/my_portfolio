@@ -52,20 +52,29 @@ nav ul li a:hover {
   font-size: 25px;
 }
 
-.header_text {
+.header_glass {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3rem;
+  border-radius: 3rem;
   position: relative;
-  top: 280px;
-  left: 300px;
+  top: 25%;
+  left: 10%;
+  z-index: 1;
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
 }
 
-.header_text h1 {
+.header_glass h1 {
   color: white;
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.5;
 }
 
-.header_text h1:nth-child(2) {
+.header_glass h1:nth-child(2) {
   text-indent: 50px;
 }
 
