@@ -60,12 +60,12 @@ nav ul li a:hover {
   border-radius: 3rem;
   position: relative;
   top: 25%;
-  left: 10%;
+  left: 25%;
   z-index: 1;
   backdrop-filter: blur(40px);
   border: solid 2px transparent;
   background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.05);
 }
 
 .header_glass h1 {
@@ -252,7 +252,7 @@ video {
 }
 
 .resume-btn {
-  padding: 1rem;
+  padding: 1rem 3rem;
   opacity: 0.8;
   border-radius: 20px;
   color: #ffff;

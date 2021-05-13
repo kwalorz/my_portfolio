@@ -1,17 +1,33 @@
 ///////////////////Header Animations////////////////////////////
 window.onload = function () {
   const headerGlass = document.querySelector(".header_glass");
-  const headerAnimation = document.querySelectorAll(".header_animation");
+  const headerText = document.querySelectorAll(".header_animation");
 
-  headerGlass.style.transform = "scale(1)";
-  headerGlass.style.transition = "all 1s ease-in-out";
+  const animation = () => {
+    const sequenceOne = function () {
+      headerGlass.style.transform = "scale(1)";
+      headerGlass.style.transition = "all .4s ease-in-out";
 
-  headerAnimation.forEach(function (seq, i) {
-    seq.style.transform = "translateX(0%)";
-    seq.style.transition = `all 1s ease-in-out ${i + 1}s`;
-    seq.style.animation = `fadeIn linear ${i + 6}s`;
-  });
+      headerText.forEach(function (seq, i) {
+        seq.style.transform = "translateX(0%)";
+        seq.style.transition = `all 1s ease-in-out ${i + 1}s`;
+        seq.style.animation = `fadeIn linear ${i + 3.5}s`;
+      });
+    };
+
+    const sequenceTwo = setTimeout(function () {
+      headerGlass.style.transform =
+        "translateX(-50%) perspective(400px) rotateY(20deg)";
+      headerGlass.style.transition = "all 1s ease-in-out";
+    }, 4000);
+
+    sequenceOne();
+    sequenceTwo();
+  };
+
+  animation();
 };
+
 /////////////////////Modal Windows////////////////////////////////
 
 const modalProjects = document.querySelector("#projects-section");
