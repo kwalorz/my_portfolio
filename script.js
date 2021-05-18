@@ -4,26 +4,22 @@ window.onload = function () {
   const headerText = document.querySelectorAll(".header_animation");
 
   const animation = () => {
-    const sequenceOne = function () {
-      headerGlass.style.transform = "scale(1)";
-      headerGlass.style.transition = "all .4s ease-in-out";
+    headerGlass.style.transform = "scale(1)";
+    headerGlass.style.transition = "all .4s ease-in-out";
 
-      headerText.forEach(function (seq, i) {
-        seq.style.transform = "translateX(0%)";
-        seq.style.transition = `all 1s ease-in-out ${i + 1}s`;
-        seq.style.animation = `fadeIn linear ${i + 3.5}s`;
-      });
-    };
-
-    const sequenceTwo = setTimeout(function () {
-      headerGlass.style.transform =
-        "translateX(-50%) perspective(400px) rotateY(20deg)";
-      headerGlass.style.transition = "all 1s ease-in-out";
-    }, 4000);
-
-    sequenceOne();
-    sequenceTwo();
+    headerText.forEach(function (seq, i) {
+      seq.style.transform = "translateX(0%)";
+      seq.style.transition = `all 1s ease-in-out ${i + 1}s`;
+      seq.style.animation = `fadeIn linear ${i + 3.5}s`;
+    });
   };
+
+  const sequenceTwo = setTimeout(function () {
+    headerGlass.style.boxShadow = "-10px 0px 8px -3px rgba(46, 54, 68, 0.5)";
+    headerGlass.style.transform =
+      "translateX(-50%) perspective(400px) rotateY(20deg)";
+    headerGlass.style.transition = "all 1s ease-in-out";
+  }, 4000);
 
   animation();
 };
@@ -33,6 +29,7 @@ window.onload = function () {
 const modalProjects = document.querySelector("#projects-section");
 const projectsBtn = document.querySelector("#projects-btn");
 const modalAbout = document.querySelector("#about-section");
+const aboutContent = document.querySelector(".modal-content-about");
 const aboutBtn = document.querySelector("#about-btn");
 const modalResume = document.querySelector("#resume-section");
 const resumeBtn = document.querySelector("#resume-btn");
@@ -46,6 +43,8 @@ projectsBtn.addEventListener("click", () => {
 
 aboutBtn.addEventListener("click", () => {
   modalAbout.style.display = "block";
+  aboutContent.style.transition = "all 5s ease-in-out";
+  aboutContent.style.transform = "scale(1)";
 });
 
 resumeBtn.addEventListener("click", () => {

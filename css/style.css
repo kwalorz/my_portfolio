@@ -65,7 +65,6 @@ nav ul li a:hover {
   backdrop-filter: blur(40px);
   border: solid 2px transparent;
   background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.05);
 }
 
 .header_glass h1 {
@@ -80,7 +79,7 @@ nav ul li a:hover {
 }
 
 .header_animation {
-  transform: translateX(-250%);
+  transform: translateX(-300%);
 }
 
 @keyframes fadeIn {
@@ -120,14 +119,6 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -5;
-  object-fit: cover;
-}
-
 /*******************Modal windows************************/
 
 .modal {
@@ -146,7 +137,7 @@ video {
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -160,45 +151,89 @@ video {
 /***********************Projects************************************/
 
 .modal-content-projects {
+  display: block;
   background-color: rgba(0, 0, 0, 0);
   margin: 5% auto;
   padding: 20px;
-
   border-radius: 10px 0px 0px 10px;
   width: 94%;
-  height: 80%;
+  height: 100%;
   overflow: hidden;
 }
 
 .project-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
 }
-
-.project-window {
-}
-
-.project-window > img {
+.project-window .current {
   box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);
-  margin: 5px;
+  margin: 0;
+  border-radius: 20px;
+  height: 400px;
+  width: 700px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 5;
+}
+
+.project-window .backdrop {
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);
+  margin: 0 -20px;
   border-radius: 20px;
   height: 200px;
   width: 400px;
   object-fit: cover;
   object-position: center;
-}
-
-.project-text {
+  z-index: 1;
 }
 
 .project-text > h1 {
   margin-bottom: 2rem;
   text-align: center;
 }
+
+.btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider_btn {
+  border: none;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(122, 3, 133, 0.734) 33%,
+    rgb(27, 97, 182) 100%
+  );
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.slider_btn:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(241, 93, 255, 0.734) 33%,
+    rgb(10, 121, 255) 100%
+  );
+}
+
+.slider_btn-left {
+  margin-right: 20px;
+}
+.slider_btn-right {
+  margin-left: 20px;
+}
 /************************About Section*******************************/
 
 .modal-content-about {
+  transform: scale(0);
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
