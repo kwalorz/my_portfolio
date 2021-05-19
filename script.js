@@ -29,7 +29,7 @@ window.onload = function () {
 const modalProjects = document.querySelector("#projects-section");
 const projectsBtn = document.querySelector("#projects-btn");
 const modalAbout = document.querySelector("#about-section");
-const aboutContent = document.querySelector(".modal-content-about");
+
 const aboutBtn = document.querySelector("#about-btn");
 const modalResume = document.querySelector("#resume-section");
 const resumeBtn = document.querySelector("#resume-btn");
@@ -67,3 +67,12 @@ window.onclick = function (e) {
   if (e.target == modalResume) e.target.style.display = "none";
   if (e.target == modalContact) e.target.style.display = "none";
 };
+
+//////////////////////////Project Slider////////////////////////////////////
+const slides = document.querySelectorAll(".project-window");
+const btnLeft = document.querySelector(".slider_btn-left");
+const btnRight = document.querySelector(".slider_btn-right");
+
+console.log(slides);
+
+let curSlide = document.querySelector(".current");

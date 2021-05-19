@@ -156,7 +156,7 @@ nav ul li a:hover {
   margin: 5% auto;
   padding: 20px;
   border-radius: 10px 0px 0px 10px;
-  width: 94%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
@@ -165,27 +165,48 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   margin-top: 80px;
-}
-.project-window .current {
-  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);
-  margin: 0;
-  border-radius: 20px;
-  height: 400px;
-  width: 700px;
-  object-fit: cover;
-  object-position: center;
-  z-index: 5;
+  overflow: hidden;
 }
 
-.project-window .backdrop {
+.project-window > img {
   box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);
-  margin: 0 -20px;
   border-radius: 20px;
-  height: 200px;
-  width: 400px;
   object-fit: cover;
   object-position: center;
+  height: 300px;
+  width: 500px;
+}
+
+.project-window .backdrop_level-one {
+  transform: scale(0.7);
+}
+.project-window .backdrop_level-two {
+  transform: scale(0.5);
+}
+
+.slide-1 {
+  position: absolute;
+  top: calc((100% - 200px) / 2);
+  left: calc((100% - 500px) / 2);
+  z-index: 3;
+}
+.slide-2 {
+  position: absolute;
+  top: calc((100% - 400px) / 2);
+  right: 150px;
+  z-index: 2;
+}
+.slide-3 {
+  position: absolute;
+  top: 50px;
+  left: calc((100% - 500px) / 2);
   z-index: 1;
+}
+.slide-4 {
+  position: absolute;
+  top: calc((100% - 400px) / 2);
+  left: 150px;
+  z-index: 2;
 }
 
 .project-text > h1 {
@@ -194,7 +215,10 @@ nav ul li a:hover {
 }
 
 .btn_container {
-  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  left: calc((100% - 200px) / 2);
+  width: 200px;
   display: flex;
   justify-content: center;
 }
@@ -214,6 +238,7 @@ nav ul li a:hover {
   color: white;
   font-size: 2rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .slider_btn:hover {
