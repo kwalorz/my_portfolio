@@ -1,3 +1,5 @@
+"use strict";
+
 ///////////////////Header Animations////////////////////////////
 window.onload = function () {
   const headerGlass = document.querySelector(".header_glass");
@@ -12,14 +14,13 @@ window.onload = function () {
       seq.style.transition = `all 1s ease-in-out ${i + 1}s`;
       seq.style.animation = `fadeIn linear ${i + 3.5}s`;
     });
+    const sequenceTwo = setTimeout(function () {
+      headerGlass.style.boxShadow = "-10px 0px 8px -3px rgba(46, 54, 68, 0.5)";
+      headerGlass.style.transform =
+        "translateX(-50%) perspective(400px) rotateY(20deg)";
+      headerGlass.style.transition = "all 1s ease-in-out";
+    }, 4000);
   };
-
-  const sequenceTwo = setTimeout(function () {
-    headerGlass.style.boxShadow = "-10px 0px 8px -3px rgba(46, 54, 68, 0.5)";
-    headerGlass.style.transform =
-      "translateX(-50%) perspective(400px) rotateY(20deg)";
-    headerGlass.style.transition = "all 1s ease-in-out";
-  }, 4000);
 
   animation();
 };
@@ -39,6 +40,7 @@ const closeBtn = document.querySelectorAll(".close");
 
 projectsBtn.addEventListener("click", () => {
   modalProjects.style.display = "block";
+  slider();
 });
 
 aboutBtn.addEventListener("click", () => {
@@ -68,11 +70,38 @@ window.onclick = function (e) {
   if (e.target == modalContact) e.target.style.display = "none";
 };
 
-//////////////////////////Project Slider////////////////////////////////////
-const slides = document.querySelectorAll(".project-window");
-const btnLeft = document.querySelector(".slider_btn-left");
-const btnRight = document.querySelector(".slider_btn-right");
+//////////////////////////Project Display////////////////////////////////////
 
-console.log(slides);
+const slider = function () {
+  const btnLeft = document.querySelector(".slider_btn-left");
+  const btnRight = document.querySelector(".slider_btn-right");
+  const slides = document.querySelectorAll(".project-window");
 
-let curSlide = document.querySelector(".current");
+  btnRight.addEventListener("click", () => {
+    slides.forEach((slide) => {
+      slide.style.transition = "all .5s ease-in-out";
+      if (slide.classList.contains("slide-1"))
+        return slide.classList.replace("slide-1", "slide-2");
+      if (slide.classList.contains("slide-2"))
+        return slide.classList.replace("slide-2", "slide-3");
+      if (slide.classList.contains("slide-3"))
+        return slide.classList.replace("slide-3", "slide-4");
+      if (slide.classList.contains("slide-4"))
+        return slide.classList.replace("slide-4", "slide-1");
+    });
+  });
+
+  btnLeft.addEventListener("click", () => {
+    slides.forEach((slide) => {
+      slide.style.transition = "all .5s ease-in-out";
+      if (slide.classList.contains("slide-1"))
+        return slide.classList.replace("slide-1", "slide-4");
+      if (slide.classList.contains("slide-2"))
+        return slide.classList.replace("slide-2", "slide-1");
+      if (slide.classList.contains("slide-3"))
+        return slide.classList.replace("slide-3", "slide-2");
+      if (slide.classList.contains("slide-4"))
+        return slide.classList.replace("slide-4", "slide-3");
+    });
+  });
+};

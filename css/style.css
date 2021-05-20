@@ -177,13 +177,6 @@ nav ul li a:hover {
   width: 500px;
 }
 
-.project-window .backdrop_level-one {
-  transform: scale(0.7);
-}
-.project-window .backdrop_level-two {
-  transform: scale(0.5);
-}
-
 .slide-1 {
   position: absolute;
   top: calc((100% - 200px) / 2);
@@ -195,18 +188,21 @@ nav ul li a:hover {
   top: calc((100% - 400px) / 2);
   right: 150px;
   z-index: 2;
+  transform: scale(0.7);
 }
 .slide-3 {
   position: absolute;
   top: 50px;
   left: calc((100% - 500px) / 2);
   z-index: 1;
+  transform: scale(0.5);
 }
 .slide-4 {
   position: absolute;
   top: calc((100% - 400px) / 2);
   left: 150px;
   z-index: 2;
+  transform: scale(0.7);
 }
 
 .project-text > h1 {
