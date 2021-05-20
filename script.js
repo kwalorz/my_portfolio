@@ -30,7 +30,6 @@ window.onload = function () {
 const modalProjects = document.querySelector("#projects-section");
 const projectsBtn = document.querySelector("#projects-btn");
 const modalAbout = document.querySelector("#about-section");
-
 const aboutBtn = document.querySelector("#about-btn");
 const modalResume = document.querySelector("#resume-section");
 const resumeBtn = document.querySelector("#resume-btn");
@@ -75,33 +74,24 @@ window.onclick = function (e) {
 const slider = function () {
   const btnLeft = document.querySelector(".slider_btn-left");
   const btnRight = document.querySelector(".slider_btn-right");
-  const slides = document.querySelectorAll(".project-window");
+  const slides = document.querySelectorAll(".project_window");
+  const carousel = document.querySelector(".project_content");
 
-  btnRight.addEventListener("click", () => {
-    slides.forEach((slide) => {
-      slide.style.transition = "all .5s ease-in-out";
-      if (slide.classList.contains("slide-1"))
-        return slide.classList.replace("slide-1", "slide-2");
-      if (slide.classList.contains("slide-2"))
-        return slide.classList.replace("slide-2", "slide-3");
-      if (slide.classList.contains("slide-3"))
-        return slide.classList.replace("slide-3", "slide-4");
-      if (slide.classList.contains("slide-4"))
-        return slide.classList.replace("slide-4", "slide-1");
-    });
-  });
+  let slideCount = 4;
+  let selectedIndex = 0;
+
+  function rotateCarousel() {
+    let angle = (selectedIndex / slideCount) * -360;
+    carousel.style.transform = "translateZ(-288px) rotateY(" + angle + "deg)";
+  }
 
   btnLeft.addEventListener("click", () => {
-    slides.forEach((slide) => {
-      slide.style.transition = "all .5s ease-in-out";
-      if (slide.classList.contains("slide-1"))
-        return slide.classList.replace("slide-1", "slide-4");
-      if (slide.classList.contains("slide-2"))
-        return slide.classList.replace("slide-2", "slide-1");
-      if (slide.classList.contains("slide-3"))
-        return slide.classList.replace("slide-3", "slide-2");
-      if (slide.classList.contains("slide-4"))
-        return slide.classList.replace("slide-4", "slide-3");
-    });
+    selectedIndex--;
+    rotateCarousel();
+  });
+
+  btnRight.addEventListener("click", function () {
+    selectedIndex++;
+    rotateCarousel();
   });
 };
