@@ -76,22 +76,24 @@ const slider = function () {
   const btnRight = document.querySelector(".slider_btn-right");
   const slides = document.querySelectorAll(".project_window");
   const carousel = document.querySelector(".project_content");
-
+  const descriptions = document.querySelectorAll(".project_description");
+  console.log(descriptions);
   let slideCount = slides.length;
-  let selectedIndex = 0;
+  let currentSlide = 0;
 
   function rotateCarousel() {
-    let angle = (selectedIndex / slideCount) * -360;
+    let angle = (currentSlide / slideCount) * -360;
     carousel.style.transform = "translateZ(-90px) rotateY(" + angle + "deg)";
+    descriptions[currentSlide].style.transform = "translateX(-1920px)";
   }
 
   btnLeft.addEventListener("click", () => {
-    selectedIndex--;
+    currentSlide--;
     rotateCarousel();
   });
 
   btnRight.addEventListener("click", function () {
-    selectedIndex++;
+    currentSlide++;
     rotateCarousel();
   });
 };

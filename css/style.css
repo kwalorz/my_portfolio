@@ -152,18 +152,18 @@ nav ul li a:hover {
 
 .modal_content-projects {
   display: block;
-  position: relative;
   background-color: rgba(0, 0, 0, 0);
-  margin: 5% auto;
   padding: 20px;
   border-radius: 10px 0px 0px 10px;
   width: 100%;
-  height: 90%;
+  height: 100%;
   overflow: hidden;
 }
 
-.project_container {
+.project_carousel {
   position: relative;
+  top: 20%;
+  left: 10%;
   width: 500px;
   height: 300px;
   perspective: 1000px;
@@ -180,7 +180,7 @@ nav ul li a:hover {
 
 .project_window > img {
   box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
+  border-radius: 5px;
   object-fit: cover;
   object-position: center;
   height: 100%;
@@ -191,26 +191,50 @@ nav ul li a:hover {
   position: absolute;
   width: 500px;
   height: 300px;
-  left: 10px;
-  top: 10px;
+  opacity: 0.95;
 }
 
 .project_window:nth-child(1) {
-  transform: rotateY(0deg) translateZ(250px);
+  transform: rotateY(20deg) translateZ(251px);
 }
 .project_window:nth-child(2) {
-  transform: rotateY(90deg) translateZ(250px);
+  transform: rotateY(110deg) translateZ(251px);
 }
 .project_window:nth-child(3) {
-  transform: rotateY(180deg) translateZ(250px);
+  transform: rotateY(200deg) translateZ(251px);
 }
 .project_window:nth-child(4) {
-  transform: rotateY(270deg) translateZ(250px);
+  transform: rotateY(290deg) translateZ(251px);
 }
 
+.project_description {
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  color: white;
+}
+
+.project_description h1,
+p {
+  margin: 1rem;
+}
+
+.project_description:nth-child(2) {
+  transform: translateX(600%);
+}
+.project_description:nth-child(3) {
+  transform: translateX(600%);
+}
+.project_description:nth-child(4) {
+  transform: translateX(600%);
+}
 .btn_container {
   position: absolute;
-  bottom: 100px;
+  bottom: 20%;
   left: calc((100% - 200px) / 2);
   width: 200px;
   display: flex;
