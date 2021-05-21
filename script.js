@@ -77,12 +77,12 @@ const slider = function () {
   const slides = document.querySelectorAll(".project_window");
   const carousel = document.querySelector(".project_content");
 
-  let slideCount = 4;
+  let slideCount = slides.length;
   let selectedIndex = 0;
 
   function rotateCarousel() {
     let angle = (selectedIndex / slideCount) * -360;
-    carousel.style.transform = "translateZ(-288px) rotateY(" + angle + "deg)";
+    carousel.style.transform = "translateZ(-90px) rotateY(" + angle + "deg)";
   }
 
   btnLeft.addEventListener("click", () => {

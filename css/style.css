@@ -158,7 +158,7 @@ nav ul li a:hover {
   padding: 20px;
   border-radius: 10px 0px 0px 10px;
   width: 100%;
-  height: 100vh;
+  height: 90%;
   overflow: hidden;
   perspective: 1000px;
 }
@@ -167,8 +167,8 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   position: absolute;
+  transform: translateZ(-250deg);
   transform-style: preserve-3d;
-  transform: translateZ(-288px) rotateY(-160deg);
   transition: transform 1s;
 }
 
@@ -183,23 +183,23 @@ nav ul li a:hover {
 
 .project_window {
   position: absolute;
-  width: 300px;
-  height: 400px;
+  width: 500px;
+  height: 300px;
   left: 10px;
   top: 10px;
 }
 
 .project_window:nth-child(1) {
-  transform: rotateY(0deg) translateZ(300px);
+  transform: rotateY(0deg) translateZ(250px);
 }
 .project_window:nth-child(2) {
-  transform: rotateY(90deg) translateZ(300px);
+  transform: rotateY(90deg) translateZ(250px);
 }
 .project_window:nth-child(3) {
-  transform: rotateY(180deg) translateZ(300px);
+  transform: rotateY(180deg) translateZ(250px);
 }
 .project_window:nth-child(4) {
-  transform: rotateY(270deg) translateZ(300px);
+  transform: rotateY(270deg) translateZ(250px);
 }
 
 .btn_container {
