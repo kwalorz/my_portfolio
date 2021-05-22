@@ -54,7 +54,6 @@ nav ul li a:hover {
 
 .header_glass {
   display: inline-block;
-  transform: scale(0);
   background: rgba(255, 255, 255, 0.2);
   padding: 3rem;
   border-radius: 3rem;
@@ -65,6 +64,8 @@ nav ul li a:hover {
   backdrop-filter: blur(40px);
   border: solid 2px transparent;
   background-clip: padding-box;
+  box-shadow: -10px 0px 8px -3px rgba(46, 54, 68, 0.5);
+  transform: translateX(-50%) perspective(400px) rotateY(20deg);
 }
 
 .header_glass h1 {
@@ -76,19 +77,6 @@ nav ul li a:hover {
 
 .header_glass h1:nth-child(2) {
   text-indent: 50px;
-}
-
-.header_animation {
-  transform: translateX(-300%);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .social_icons {
@@ -130,7 +118,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   overflow: auto;
 }
 
@@ -211,11 +199,12 @@ nav ul li a:hover {
   height: 300px;
   width: 400px;
   position: absolute;
-  right: 10%;
+  right: 20%;
   top: 20%;
-  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 20px;
   color: white;
+  transform: translateX(600%);
+  transition: transform 0.9s ease-in-out;
 }
 
 .project_description h1,
@@ -223,15 +212,6 @@ p {
   margin: 1rem;
 }
 
-.project_description:nth-child(2) {
-  transform: translateX(600%);
-}
-.project_description:nth-child(3) {
-  transform: translateX(600%);
-}
-.project_description:nth-child(4) {
-  transform: translateX(600%);
-}
 .btn_container {
   position: absolute;
   bottom: 20%;
@@ -335,7 +315,6 @@ p {
   border-radius: 20px;
   color: #ffff;
   text-decoration: none;
-  box-shadow: 1px 1px 1px 1px #333;
   background: rgb(24, 0, 36);
   background: -moz-linear-gradient(
     45deg,
@@ -402,13 +381,14 @@ form textarea {
 form button {
   border: none;
   margin: 1rem auto;
-  width: 100px;
-  height: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
   padding: 0.4rem;
   color: #fff;
-  border-radius: 10px;
-  box-shadow: #000 0px 1px 3px 1px;
-  opacity: 0.8;
+
   background: rgb(24, 0, 36);
   background: -moz-linear-gradient(
     45deg,
@@ -426,10 +406,11 @@ form button {
     rgba(0, 116, 255, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#0074ff",GradientType=1);
+  transition: transform 0.3s ease-in-out;
 }
 
 form button:hover {
-  opacity: 0.9;
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -470,21 +451,7 @@ form button:hover {
 }
 
 .fas {
-  background: -moz-linear-gradient(
-    45deg,
-    rgba(24, 0, 36, 0.7343312324929971) 33%,
-    rgba(0, 116, 255, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    45deg,
-    rgba(24, 0, 36, 0.7343312324929971) 33%,
-    rgba(0, 116, 255, 1) 100%
-  );
-  background: linear-gradient(
-    45deg,
-    rgba(24, 0, 36, 0.7343312324929971) 33%,
-    rgba(0, 116, 255, 1) 100%
-  );
+  color: rgba(0, 116, 255, 1);
 
   margin-bottom: 1.2rem;
 }

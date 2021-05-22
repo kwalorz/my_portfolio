@@ -1,30 +1,5 @@
 "use strict";
 
-///////////////////Header Animations////////////////////////////
-window.onload = function () {
-  const headerGlass = document.querySelector(".header_glass");
-  const headerText = document.querySelectorAll(".header_animation");
-
-  const animation = () => {
-    headerGlass.style.transform = "scale(1)";
-    headerGlass.style.transition = "all .4s ease-in-out";
-
-    headerText.forEach(function (seq, i) {
-      seq.style.transform = "translateX(0%)";
-      seq.style.transition = `all 1s ease-in-out ${i + 1}s`;
-      seq.style.animation = `fadeIn linear ${i + 3.5}s`;
-    });
-    const sequenceTwo = setTimeout(function () {
-      headerGlass.style.boxShadow = "-10px 0px 8px -3px rgba(46, 54, 68, 0.5)";
-      headerGlass.style.transform =
-        "translateX(-50%) perspective(400px) rotateY(20deg)";
-      headerGlass.style.transition = "all 1s ease-in-out";
-    }, 4000);
-  };
-
-  animation();
-};
-
 /////////////////////Modal Windows////////////////////////////////
 
 const modalProjects = document.querySelector("#projects-section");
@@ -77,23 +52,34 @@ const slider = function () {
   const slides = document.querySelectorAll(".project_window");
   const carousel = document.querySelector(".project_content");
   const descriptions = document.querySelectorAll(".project_description");
-  console.log(descriptions);
+
+  //position first description when window opens
+  descriptions[0].style.transform = "translateX(0%)";
+
   let slideCount = slides.length;
   let currentSlide = 0;
 
   function rotateCarousel() {
     let angle = (currentSlide / slideCount) * -360;
-    carousel.style.transform = "translateZ(-90px) rotateY(" + angle + "deg)";
-    descriptions[currentSlide].style.transform = "translateX(-1920px)";
+    carousel.style.transform = `translateZ(-90px) rotateY(${angle}deg)`;
+    descriptions.forEach((des) => (des.style.transform = "translateX(600%)"));
+    descriptions[currentSlide].style.transform = "translateX(0%)";
   }
 
   btnLeft.addEventListener("click", () => {
-    currentSlide--;
+    if (currentSlide === 0) currentSlide = slideCount - 1;
+    else if (currentSlide !== 0) currentSlide--;
     rotateCarousel();
   });
 
   btnRight.addEventListener("click", function () {
-    currentSlide++;
+    if (currentSlide === slideCount - 1) currentSlide = 0;
+    else if (currentSlide !== slideCount - 1) currentSlide++;
+
     rotateCarousel();
+  });
+
+  closeBtn[0].addEventListener("click", () => {
+    descriptions.forEach((des) => (des.style.transform = "translateX(600%)"));
   });
 };
