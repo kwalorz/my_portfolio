@@ -1,5 +1,22 @@
 "use strict";
 
+//////////////////////Mobile Navigation/////////////////////////
+const navOpen = document.querySelector(".fa-bars");
+const navClose = document.querySelector(".close_nav");
+const navBar = document.querySelector("nav");
+
+navOpen.addEventListener("click", () => {
+  navOpen.style.display = "none";
+  navBar.style.display = "block";
+  navBar.style.transform = "scale(1)";
+  navBar.style.transition = "all 5s ease-in-out";
+});
+
+navClose.addEventListener("click", () => {
+  navBar.style.display = "none";
+  navOpen.style.display = "block";
+});
+
 /////////////////////Modal Windows////////////////////////////////
 
 const modalProjects = document.querySelector("#projects-section");
@@ -19,8 +36,8 @@ projectsBtn.addEventListener("click", () => {
 
 aboutBtn.addEventListener("click", () => {
   modalAbout.style.display = "block";
-  aboutContent.style.transition = "all 5s ease-in-out";
   aboutContent.style.transform = "scale(1)";
+  aboutContent.style.transition = "all 5s ease-in-out";
 });
 
 resumeBtn.addEventListener("click", () => {
@@ -33,7 +50,7 @@ contactBtn.addEventListener("click", () => {
 
 closeBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    e.target.closest(".modal").style = "none";
+    e.target.closest(".modal").style.display = "none";
   });
 });
 
