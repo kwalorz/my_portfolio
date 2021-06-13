@@ -46,6 +46,7 @@ nav ul li {
   padding: 30px;
 }
 nav ul li a {
+  display: inline-block;
   text-decoration: none;
   color: #f2f2f2;
   font-size: 22px;
@@ -53,7 +54,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  font-size: 25px;
+  transform: translateY(-5px);
 }
 
 .header_glass {
@@ -84,31 +85,22 @@ nav ul li a:hover {
 }
 
 .social_icons {
+  display: flex;
   position: absolute;
   bottom: 5%;
-  left: -10px;
+  right: 5%;
 }
 
-.social_icon-container {
-  position: relative;
-  width: 60px;
-  height: 50px;
-  background-color: #180024;
-  display: flex;
-  align-items: center;
-  transition: width 0.2s ease-in-out;
+.social_icons a {
+  opacity: 0.55;
+  color: #fff;
+  font-size: 2.8rem;
+  margin: 0.8rem;
+  transition: all 0.2s ease-in-out;
 }
 
-.social_icon-container a {
-  position: absolute;
-  right: 7px;
-  color: #0074ff;
-  font-size: 2.5rem;
-}
-
-.social_icon-container:hover {
-  width: 70px;
-  cursor: pointer;
+.social_icons a:hover {
+  transform: translateY(-5px);
 }
 
 /*******************Modal windows************************/
@@ -200,25 +192,57 @@ nav ul li a:hover {
 }
 
 .project_description {
-  height: 300px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   position: absolute;
-  right: 20%;
+  right: 10%;
   top: 20%;
   border-radius: 20px;
   color: white;
   transform: translateX(600%);
+  animation: fadeIn;
   transition: transform 0.9s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .project_description h1,
 p {
+  margin: 1rem 1rem 2.5rem 1rem;
+  line-height: 1.5;
+}
+
+.project_description a {
+  display: inline-block;
   margin: 1rem;
+  border: none;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(54, 15, 58, 0.734);
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.1s ease-in-out;
+}
+
+.project_description a:nth-child(2) {
+  background-color: rgb(27, 97, 182);
+}
+
+.project_description a:hover {
+  transform: translateY(-5px);
 }
 
 .btn_container {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   left: calc((100% - 200px) / 2);
   width: 200px;
   display: flex;
@@ -508,11 +532,11 @@ form button:hover {
   nav ul li a {
     text-decoration: none;
     color: #f2f2f2;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   nav ul li a:hover {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .header_glass {
@@ -561,7 +585,7 @@ form button:hover {
     position: absolute;
     right: 0px;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .social_icon-container:hover {

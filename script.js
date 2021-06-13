@@ -81,6 +81,7 @@ const slider = function () {
     carousel.style.transform = `translateZ(-90px) rotateY(${angle}deg)`;
     descriptions.forEach((des) => (des.style.transform = "translateX(600%)"));
     descriptions[currentSlide].style.transform = "translateX(0%)";
+    descriptions[currentSlide].style.animation = "";
   }
 
   btnLeft.addEventListener("click", () => {
