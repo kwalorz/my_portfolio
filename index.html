@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css"/>
     <script src="./script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/277a2d5b13.js"
@@ -20,6 +21,7 @@
   </head>
   <body>
     <header>
+      <div class="overlay"></div>
       <i class="fas fa-bars"></i>
       <nav>
         <span class="close_nav">&times;</span>
@@ -31,9 +33,9 @@
         </ul>
       </nav>
       <div class="header_glass">
-        <h1>Design</h1>
-        <h1>Develop</h1>
-        <h1>Deploy</h1>
+       <h1>Welcome!</h1> <br>
+       <p>Thank you for visiting my site. <br> <br> Be sure to visit my projects page and send me message via the contact button!</p>
+      <button class="home-btn">VIEW PROJECTS</button>
       </div>
       <div class="social_icons">
         <a
@@ -65,7 +67,7 @@
               />
             </div>
             <div class="project_window">
-              <img src="img/bank_website.png" alt="bank_website" />
+              <img src="img/top_quality_paint.png" alt="painting website" />
             </div>
             <div class="project_window">
               <img src="img/mapty_app.png" alt="mapty_app" />
@@ -101,11 +103,21 @@
         </div>
 
         <div class="project_description">
-          <h1>2 Lorem ipsum dolor</h1>
+          <h1>Top Quality Painting Co</h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum,
-            perferendis.
+            Responsive 5-page website layout made with WordPress using the Divi design tool. <br>
+            <br>
+            Project consists of custom CSS used for styling. 
           </p>
+          <div class="project_description-buttons">
+           
+            <a
+              href="https://topqualitypaintco.com/"
+              target="_blank"
+              rel="noopener"
+              >Visit Site</a
+            >
+          </div>
         </div>
         <div class="project_description">
           <h1>3 Lorem ipsum dolor</h1>
@@ -152,7 +164,7 @@
           <h1>Download My Resume</h1>
           <a
             class="resume-btn"
-            href="img/KevinWalorz_resume.pdf"
+            href="img/Resume_2021.pdf"
             download="kevin-walorz_resume"
             >PDF
           </a>
@@ -165,7 +177,7 @@
         <div class="contact-content">
           <h1>Contact Me</h1>
           <div class="contact-info">
-            <form action="https://formsubmit.co/kmwalorz@gmail.com" method="POST" enctype="multipart/form-data" name= "">
+            <form action="https://formsubmit.co/1ccfbfc31c68edcda3ad4404f958fd35" method="POST" enctype="multipart/form-data">
               <input type="hidden" name="_subject" value="New Form Submission">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="John Doe" required/>
@@ -193,7 +205,6 @@
                 autofocus
               ></textarea>
               <button type= "submit" class="btn">SUBMIT</button>
-              <input type="hidden" name="_next" value="https://kwalorz.github.io/my_portfolio/thankyou.html">
             </form>
             <div class="border-right"></div>
             <div class="contact-icons">

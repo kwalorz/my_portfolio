@@ -8,8 +8,6 @@ const navBar = document.querySelector("nav");
 navOpen.addEventListener("click", () => {
   navOpen.style.display = "none";
   navBar.style.display = "block";
-  navBar.style.transform = "scale(1)";
-  navBar.style.transition = "all 5s ease-in-out";
 });
 
 navClose.addEventListener("click", () => {
@@ -21,6 +19,7 @@ navClose.addEventListener("click", () => {
 
 const modalProjects = document.querySelector("#projects-section");
 const projectsBtn = document.querySelector("#projects-btn");
+const homeBtn = document.querySelector(".home-btn");
 const modalAbout = document.querySelector("#about-section");
 const aboutBtn = document.querySelector("#about-btn");
 const modalResume = document.querySelector("#resume-section");
@@ -29,28 +28,36 @@ const modalContact = document.querySelector("#contact-section");
 const contactBtn = document.querySelector("#contact-btn");
 const closeBtn = document.querySelectorAll(".close");
 
-projectsBtn.addEventListener("click", () => {
-  modalProjects.style.display = "block";
-  slider();
-});
+[projectsBtn, homeBtn].forEach((btn) =>
+  btn.addEventListener("click", () => {
+    modalProjects.style.display = "block";
+    navBar.style.display = "none";
+    navOpen.style.display = "none";
+    slider();
+  })
+);
 
 aboutBtn.addEventListener("click", () => {
   modalAbout.style.display = "block";
   aboutContent.style.transform = "scale(1)";
   aboutContent.style.transition = "all 5s ease-in-out";
+  navBar.style.display = "none";
 });
 
 resumeBtn.addEventListener("click", () => {
   modalResume.style.display = "block";
+  navBar.style.display = "none";
 });
 
 contactBtn.addEventListener("click", () => {
   modalContact.style.display = "block";
+  navBar.style.display = "none";
 });
 
 closeBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.target.closest(".modal").style.display = "none";
+    navBar.style.display = "block";
   });
 });
 

@@ -17,7 +17,16 @@ header {
   overflow: hidden;
 }
 
-.fa-bars {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .3);
+}
+
+ .fa-bars {
   display: none;
 }
 
@@ -58,19 +67,23 @@ nav ul li a:hover {
 }
 
 .header_glass {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+ left: 50%;
+ margin-right: -50%;
+ transform: translate(-50%, -50%);
+ background: rgba(255, 255, 255, 0.09);
+  padding: 4rem;
   border-radius: 3rem;
-  position: relative;
-  top: 25%;
-  left: 25%;
   z-index: 1;
   backdrop-filter: blur(40px);
   border: solid 2px transparent;
   background-clip: padding-box;
   box-shadow: -10px 0px 8px -3px rgba(46, 54, 68, 0.5);
-  transform: translateX(-50%) perspective(400px) rotateY(20deg);
 }
 
 .header_glass h1 {
@@ -80,9 +93,33 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
-.header_glass h1:nth-child(2) {
-  text-indent: 50px;
+.header_glass p {
+  text-align: center;
+  width: 40ch;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
+
+.home-btn {
+  width: 50%;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: none;
+  background:rgba(54, 15, 58, 0.734);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+
+.home-btn:hover {
+  width: 60%;
+  cursor: pointer;
+  opacity: .9;
+}
+
 
 .social_icons {
   display: flex;
@@ -136,7 +173,7 @@ nav ul li a:hover {
 
 .modal_content-projects {
   display: block;
-  background-color: rgba(0, 0, 0, 0);
+
   padding: 20px;
   border-radius: 10px 0px 0px 10px;
   width: 100%;
@@ -156,8 +193,6 @@ nav ul li a:hover {
 .project_content {
   width: 100%;
   height: 100%;
-  position: absolute;
-  transform: translateZ(-250deg);
   transform-style: preserve-3d;
   transition: transform 1s;
 }
@@ -339,7 +374,7 @@ p {
 
 .resume-btn {
   padding: 1rem 3rem;
-  opacity: 0.8;
+  opacity: 1;
   border-radius: 20px;
   color: #ffff;
   text-decoration: none;
@@ -360,11 +395,18 @@ p {
     rgba(0, 116, 255, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#0074ff",GradientType=1);
+  transition: all 0.1s ease-in-out;
 }
 
 .resume-btn:hover {
-  opacity: 0.9;
+  padding: 1rem 3.3rem;
+  cursor: pointer;
+  opacity: .9;
+
 }
+  
+  
+
 
 /***********************Contact***************************/
 
@@ -484,112 +526,5 @@ form button:hover {
   margin-bottom: 1.2rem;
 }
 
-/*****************Media Querries****************/
 
-@media screen and (max-width: 480px) {
-  .fa-bars {
-    display: block;
-    color: white;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-  }
-  nav {
-    display: none;
-    position: absolute;
-    z-index: 50;
-    left: 0;
-    top: 0;
-    width: 102%;
-    height: 100%;
-    opacity: 0.9;
-    overflow: hidden;
-    background-color: #333;
-    transform: scale(0);
-  }
 
-  .close_nav {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 40px;
-    color: white;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  nav ul li {
-    margin-top: 0px;
-  }
-  nav ul li a {
-    text-decoration: none;
-    color: #f2f2f2;
-    font-size: 1.2rem;
-  }
-
-  nav ul li a:hover {
-    font-size: 1.2rem;
-  }
-
-  .header_glass {
-    display: block;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 3rem;
-    border-radius: 3rem;
-    position: absolute;
-    top: 25%;
-    left: 15%;
-    z-index: 1;
-    backdrop-filter: blur(40px);
-    border: solid 2px transparent;
-    background-clip: padding-box;
-    box-shadow: -10px 0px 8px -3px rgba(46, 54, 68, 0.5);
-    transform: translateX(0%) rotateY(0deg);
-  }
-
-  .header_glass h1 {
-    color: white;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 1.5;
-  }
-
-  .social_icons {
-    display: flex;
-    justify-content: space-evenly;
-    width: 60%;
-    margin: 0 20%;
-    bottom: 10%;
-  }
-
-  .social_icon-container {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    transition: width 0.2s ease-in-out;
-  }
-
-  .social_icon-container a {
-    position: absolute;
-    right: 0px;
-    color: white;
-    font-size: 2.8rem;
-  }
-
-  .social_icon-container:hover {
-    width: 70px;
-    cursor: pointer;
-  }
-}
