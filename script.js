@@ -32,16 +32,13 @@ const closeBtn = document.querySelectorAll(".close");
   btn.addEventListener("click", () => {
     modalProjects.style.display = "block";
     navBar.style.display = "none";
-    navOpen.style.display = "none";
     slider();
   })
 );
 
 aboutBtn.addEventListener("click", () => {
   modalAbout.style.display = "block";
-  aboutContent.style.transform = "scale(1)";
   aboutContent.style.transition = "all 5s ease-in-out";
-  navBar.style.display = "none";
 });
 
 resumeBtn.addEventListener("click", () => {
@@ -56,16 +53,28 @@ contactBtn.addEventListener("click", () => {
 
 closeBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    e.target.closest(".modal").style.display = "none";
     navBar.style.display = "block";
+    e.target.closest(".modal").style.display = "none";
   });
 });
 
 window.onclick = function (e) {
-  if (e.target == modalProjects) e.target.style.display = "none";
-  if (e.target == modalAbout) e.target.style.display = "none";
-  if (e.target == modalResume) e.target.style.display = "none";
-  if (e.target == modalContact) e.target.style.display = "none";
+  if (e.target == modalProjects) {
+    navBar.style.display = "block";
+    e.target.style.display = "none";
+  }
+  if (e.target == modalAbout) {
+    navBar.style.display = "block";
+    e.target.style.display = "none";
+  }
+  if (e.target == modalResume) {
+    navBar.style.display = "block";
+    e.target.style.display = "none";
+  }
+  if (e.target == modalContact) {
+    navBar.style.display = "block";
+    e.target.style.display = "none";
+  }
 };
 
 //////////////////////////Project Display////////////////////////////////////
