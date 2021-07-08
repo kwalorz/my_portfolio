@@ -38,7 +38,6 @@ const closeBtn = document.querySelectorAll(".close");
 
 aboutBtn.addEventListener("click", () => {
   modalAbout.style.display = "block";
-  aboutContent.style.transition = "all 5s ease-in-out";
 });
 
 resumeBtn.addEventListener("click", () => {
