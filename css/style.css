@@ -165,7 +165,9 @@ nav ul li a:hover {
 
 .close {
   color: #aaa;
-  float: right;
+  position: absolute;
+  top: 5px;
+  right: 5px;
   margin-right: 0.8rem;
   font-size: 35px;
   font-weight: bold;
@@ -181,21 +183,43 @@ nav ul li a:hover {
 /***********************Projects************************************/
 
 .modal_content-projects {
-  display: block;
   padding: 20px;
-  border-radius: none;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  border-radius: none;
+  overflow: hidden;
+}
+
+.project_carousel-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.slider_btn {
+  border: none;
+
+  margin-top: 40px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 4rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.slider_btn:hover {
+  color: rgba(139, 137, 137, 0.8);
 }
 
 .project_carousel {
   position: relative;
-  top: 20%;
-  left: 10%;
+  max-width: 1000px;
+  max-height: 600px;
   width: 500px;
   height: 300px;
   perspective: 1000px;
+  margin: 0 8rem;
 }
 
 .project_content {
@@ -205,53 +229,59 @@ nav ul li a:hover {
   transition: transform 1s;
 }
 
+.project_window {
+  position: absolute;
+  max-height: 600px;
+  max-width: 1000px;
+  opacity: 0.95;
+}
+
 .project_window > img {
   box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   display: block;
-  object-fit: cover;
-  object-position: center;
-  height: 100%;
+  object-fit: contain;
   max-width: 100%;
-}
-
-.project_window {
-  position: absolute;
-  width: 500px;
-  height: 300px;
-  opacity: 0.95;
+  max-height: 100%;
+  height: auto;
+  max-width: auto;
 }
 
 .project_window:nth-child(1) {
-  transform: rotateY(20deg) translateZ(251px);
+  transform: rotateY(0deg) translateZ(251px);
 }
 .project_window:nth-child(2) {
-  transform: rotateY(110deg) translateZ(251px);
+  transform: rotateY(90deg) translateZ(251px);
 }
 .project_window:nth-child(3) {
-  transform: rotateY(200deg) translateZ(251px);
+  transform: rotateY(180deg) translateZ(251px);
 }
 .project_window:nth-child(4) {
-  transform: rotateY(290deg) translateZ(251px);
+  transform: rotateY(270deg) translateZ(251px);
 }
 
 .project_description {
-  height: 500px;
-  width: 500px;
   position: absolute;
-  right: 10%;
-  top: 20%;
-  border-radius: 20px;
+  left: 30%;
   color: white;
   transform: translateX(600%);
-  animation: fadeIn;
   transition: transform 0.9s ease-in-out;
 }
 
+.project_description h1 {
+  text-align: center;
+}
 .project_description h1,
 .project_description p {
-  margin: 1rem 1rem 2.5rem 1rem;
-  line-height: 1.5;
+  margin: 0rem 1rem 2.5rem 1rem;
+  max-width: 60ch;
+  line-height: 1.2;
+}
+
+.project_description-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .project_description a {
@@ -275,50 +305,10 @@ nav ul li a:hover {
   transform: translateY(-5px);
 }
 
-.btn_container {
-  position: absolute;
-  bottom: 15%;
-  left: calc((100% - 200px) / 2);
-  width: 200px;
-  display: flex;
-  justify-content: center;
-}
-
-.slider_btn {
-  border: none;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
-  margin-top: 40px;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background: linear-gradient(
-    45deg,
-    rgba(122, 3, 133, 0.734) 33%,
-    rgb(27, 97, 182) 100%
-  );
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.slider_btn:hover {
-  background: linear-gradient(
-    45deg,
-    rgba(241, 93, 255, 0.734) 33%,
-    rgb(10, 121, 255) 100%
-  );
-}
-
-.slider_btn-left {
-  margin-right: 20px;
-}
-.slider_btn-right {
-  margin-left: 20px;
-}
 /************************About Section*******************************/
 
 .modal-content-about {
+  position: relative;
   background-color: #fefefe;
   margin: 15% auto;
   border-radius: 10px;
@@ -357,6 +347,7 @@ nav ul li a:hover {
 
 /*****************Resume************************/
 .modal-content-resume {
+  position: relative;
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -412,6 +403,7 @@ nav ul li a:hover {
 /***********************Contact***************************/
 
 .modal-content-contact {
+  position: relative;
   background-color: #fefefe;
   margin: 8% auto;
   padding: 20px;
