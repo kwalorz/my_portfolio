@@ -264,7 +264,7 @@ nav ul li a:hover {
   position: absolute;
   left: 30%;
   color: white;
-  transform: translateX(600%);
+  transform: translateY(600%);
   transition: transform 0.9s ease-in-out;
 }
 

@@ -32,7 +32,6 @@ const closeBtn = document.querySelectorAll(".close");
   btn.addEventListener("click", () => {
     modalProjects.style.display = "block";
     navBar.style.display = "none";
-    slider();
   })
 );
 
@@ -77,24 +76,22 @@ window.onclick = function (e) {
 };
 
 //////////////////////////Project Display////////////////////////////////////
-
-const slider = function () {
+window.addEventListener("DOMContentLoaded", () => {
   const btnLeft = document.querySelector(".slider_btn-left");
   const btnRight = document.querySelector(".slider_btn-right");
   const slides = document.querySelectorAll(".project_window");
   const carousel = document.querySelector(".project_content");
   const descriptions = document.querySelectorAll(".project_description");
 
-  let slideCount = slides.length;
   let currentSlide = 0;
-
-  descriptions[0].style.transform = "translateX(0%)";
+  let slideCount = slides.length;
+  descriptions[currentSlide].style.transform = "translateY(0%)";
 
   function rotateCarousel() {
     let angle = (currentSlide / slideCount) * -360;
     carousel.style.transform = `translateZ(-90px) rotateY(${angle}deg)`;
-    descriptions.forEach((des) => (des.style.transform = "translateX(600%)"));
-    descriptions[currentSlide].style.transform = "translateX(0%)";
+    descriptions.forEach((des) => (des.style.transform = "translateY(600%)"));
+    descriptions[currentSlide].style.transform = "translateY(0%)";
   }
 
   btnLeft.addEventListener("click", () => {
@@ -109,10 +106,4 @@ const slider = function () {
 
     rotateCarousel();
   });
-
-  //Reset slider on close
-  closeBtn[0].addEventListener("click", () => {
-    carousel.style.transform = `translateZ(-90px) rotateY(${angle}deg)`;
-    descriptions.forEach((des) => (des.style.transform = "translateX(600%)"));
-  });
-};
+});
