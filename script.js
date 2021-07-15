@@ -89,7 +89,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function rotateCarousel() {
     let angle = (currentSlide / slideCount) * -360;
-    carousel.style.transform = `translateZ(-90px) rotateY(${angle}deg)`;
+    carousel.style.transform = `rotateY(${angle}deg)`;
     descriptions.forEach((des) => (des.style.transform = "translateY(600%)"));
     descriptions[currentSlide].style.transform = "translateY(0%)";
   }
