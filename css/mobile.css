@@ -4,9 +4,8 @@
 
   header {
     z-index: 1;
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
-    background-clip: padding-box;
-    box-shadow: -10px 0px 8px -3px rgba(46, 54, 68, 0.5);
   }
 
   .fa-bars {
@@ -25,16 +24,6 @@
     height: 100%;
     overflow: hidden;
     background: rgb(24, 0, 36);
-    background: -moz-linear-gradient(
-      45deg,
-      rgba(24, 0, 36, 1) 6%,
-      rgba(199, 0, 255, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      45deg,
-      rgba(24, 0, 36, 1) 6%,
-      rgba(199, 0, 255, 1) 100%
-    );
     background: linear-gradient(
       45deg,
       rgba(24, 0, 36, 1) 6%,
@@ -63,7 +52,8 @@
     margin-top: 0;
     border-radius: 0px;
     justify-content: center;
-    background: rgba(255, 255, 255, 0);
+    background: transparent;
+    -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
     border: none;
     background-clip: none;
