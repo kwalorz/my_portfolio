@@ -13,6 +13,7 @@
     display: block;
     font-size: 4vh;
     color: #fff;
+    margin-top: 5px;
   }
   nav {
     display: none;
@@ -55,7 +56,6 @@
   }
 
   nav ul li a {
-    font-size: 5vw;
     padding: 0.3rem 0;
   }
 
@@ -70,14 +70,22 @@
     box-shadow: none;
   }
 
-  .header_glass h1 {
-    font-size: 6vw;
-  }
-  .header_glass p {
-    font-size: 5vw;
+  /****************Projects****************/
+  .project_carousel-container {
+    justify-content: space-between;
   }
 
-  /****************Projects****************/
+  .slider_btn {
+    background: rgba(0, 0, 0, 0.4);
+    width: 30px;
+  }
+  .slider_btn-left {
+    border-radius: 0px 8px 8px 0px;
+  }
+  .slider_btn-right {
+    border-radius: 8px 0px 0px 8px;
+  }
+
   .project_carousel {
     width: 280px;
     height: 168px;
@@ -98,6 +106,10 @@
   }
   .project_window:nth-child(4) {
     transform: rotateY(270deg) translateZ(140px);
+  }
+
+  .project_description a {
+    padding: 0.5rem;
   }
   /**********About**************/
   .modal-content-about {
@@ -131,5 +143,51 @@
     width: 100%;
     margin: 1.5rem auto;
     text-align: center;
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .project_carousel-container {
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .slider_btn {
+    background: rgba(0, 0, 0, 0.4);
+    width: 30px;
+  }
+  .slider_btn-left {
+    border-radius: 0px 8px 8px 0px;
+  }
+  .slider_btn-right {
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  .project_carousel {
+    width: 280px;
+    height: 168px;
+  }
+  .project_window {
+    width: 280px;
+    height: 168px;
+  }
+
+  .project_window:nth-child(1) {
+    transform: rotateY(0deg) translateZ(140px);
+  }
+  .project_window:nth-child(2) {
+    transform: rotateY(90deg) translateZ(140px);
+  }
+  .project_window:nth-child(3) {
+    transform: rotateY(180deg) translateZ(140px);
+  }
+  .project_window:nth-child(4) {
+    transform: rotateY(270deg) translateZ(140px);
+  }
+
+  .project_description p {
+    display: none;
+  }
+  .project_description a {
+    padding: 0.5rem;
   }
 }
