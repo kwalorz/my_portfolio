@@ -67,7 +67,8 @@
 
   .slider_btn {
     background: rgba(0, 0, 0, 0.4);
-    width: 30px;
+    width: 35px;
+    z-index: 60;
   }
   .slider_btn-left {
     border-radius: 0px 8px 8px 0px;
@@ -134,9 +135,104 @@
     margin: 1.5rem auto;
     text-align: center;
   }
+
+  /*****************Resume************************/
+  .modal-content-resume {
+    margin-top: 50%;
+    border: none;
+    width: 100%;
+    height: 200px;
+  }
+
+  .resume-content {
+    text-align: center;
+  }
+
+  .resume-content h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .resume-btn {
+    padding: 1rem 3rem;
+    opacity: 1;
+    border-radius: 20px;
+    color: #ffff;
+    text-decoration: none;
+    background: rgb(24, 0, 36);
+    background: linear-gradient(
+      45deg,
+      rgba(24, 0, 36, 0.7343312324929971) 33%,
+      rgba(0, 116, 255, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#0074ff",GradientType=1);
+    transition: all 0.1s ease-in-out;
+  }
+
+  .resume-btn:hover {
+    padding: 1rem 3.3rem;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  /*****************Contact*********************/
+
+  .modal-content-contact {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    border-radius: 0px;
+    border: none;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+  }
+  .border-right {
+    border-right: none;
+    border-bottom: solid 1px #000;
+    height: 1px;
+    margin: 0;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  form button {
+    font-size: 0.8rem;
+  }
+
+  .contact-icons {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  .phone {
+    margin-bottom: 1rem;
+  }
+
+  .phone i,
+  .email i {
+    font-size: 2rem;
+  }
+
+  .phone .fas,
+  .email .fas {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-device-width: 568px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #projects-section {
+    height: 120vh;
+  }
   .project_carousel-container {
     justify-content: space-between;
     margin-top: 50px;
