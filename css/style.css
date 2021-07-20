@@ -360,10 +360,15 @@ nav ul li a:hover {
   border-radius: 10px;
   width: 400px;
   height: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .resume-content {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .resume-content h1 {

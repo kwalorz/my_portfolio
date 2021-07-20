@@ -137,44 +137,12 @@
   }
 
   /*****************Resume************************/
+
   .modal-content-resume {
-    margin-top: 50%;
     border: none;
     width: 100%;
     height: 200px;
-  }
-
-  .resume-content {
-    text-align: center;
-  }
-
-  .resume-content h1 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-top: 1.8rem;
-    margin-bottom: 3rem;
-  }
-
-  .resume-btn {
-    padding: 1rem 3rem;
-    opacity: 1;
-    border-radius: 20px;
-    color: #ffff;
-    text-decoration: none;
-    background: rgb(24, 0, 36);
-    background: linear-gradient(
-      45deg,
-      rgba(24, 0, 36, 0.7343312324929971) 33%,
-      rgba(0, 116, 255, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#0074ff",GradientType=1);
-    transition: all 0.1s ease-in-out;
-  }
-
-  .resume-btn:hover {
-    padding: 1rem 3.3rem;
-    cursor: pointer;
-    opacity: 0.9;
+    margin-top: calc((100vh - 200px) / 2);
   }
 
   /*****************Contact*********************/
@@ -229,15 +197,65 @@
   }
 }
 
-@media only screen and (min-device-width: 568px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   nav ul li {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+  }
+
+  .fa-bars {
+    display: block;
+    font-size: 4vh;
+    color: #fff;
+    margin-top: 5px;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(24, 0, 36);
+    background: linear-gradient(
+      45deg,
+      rgba(24, 0, 36, 1) 6%,
+      rgb(141, 66, 161) 80%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#c700ff",GradientType=1);
+  }
+
+  .close_nav {
+    display: block;
+    font-size: 7vh;
+  }
+
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  nav ul li a {
+    padding: 0.3rem 0;
+  }
+
+  .header_glass {
+    margin-top: 0;
+    border-radius: 0px;
+    justify-content: center;
+    background: transparent;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    border: none;
+    background-clip: none;
+    box-shadow: none;
   }
 
   /***Projects***/
-  #projects-section {
-    height: 120vh;
-  }
+
   .project_carousel-container {
     justify-content: space-between;
     margin-top: 50px;
@@ -275,6 +293,12 @@
     transform: rotateY(270deg) translateZ(140px);
   }
 
+  .project_description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .project_description p {
     display: none;
   }
@@ -283,15 +307,15 @@
   }
 
   /****Resume*****/
-  .modal-content-resume {
-    margin: 2% auto;
-    width: 400px;
-    height: 300px;
-  }
 
-  .resume-content {
-    text-align: center;
-    margin-top: 3rem;
+  .modal-content-resume {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /***Contact****/
