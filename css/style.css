@@ -33,6 +33,13 @@ header {
   background: rgba(0, 0, 0, 0.3);
 }
 
+.overlay-blur {
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
 .fa-bars {
   display: none;
   position: absolute;

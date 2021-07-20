@@ -4,14 +4,17 @@
 const navOpen = document.querySelector(".fa-bars");
 const navClose = document.querySelector(".close_nav");
 const navBar = document.querySelector("nav");
+const overlay = document.querySelector(".overlay");
 
 navOpen.addEventListener("click", () => {
   navOpen.style.display = "none";
-  navBar.style.display = "block";
+  overlay.classList.add("overlay-blur");
+  navBar.style.transform = "translateX(0%)";
 });
 
 navClose.addEventListener("click", () => {
-  navBar.style.display = "none";
+  navBar.style.transform = "translateX(200%)";
+  overlay.classList.remove("overlay-blur");
   navOpen.style.display = "block";
 });
 

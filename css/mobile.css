@@ -15,21 +15,24 @@
     margin-top: 5px;
   }
   nav {
-    display: none;
+    display: block;
     position: absolute;
+    right: 0;
+    height: 80%;
+    width: 50%;
     z-index: 50;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     background: rgb(24, 0, 36);
     background: linear-gradient(
       45deg,
-      rgba(24, 0, 36, 1) 6%,
-      rgb(141, 66, 161) 80%
+      rgba(24, 0, 36, 0.6) 6%,
+      rgba(141, 66, 161, 0.9) 80%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#c700ff",GradientType=1);
+    transform: translateX(200%);
+    transition: transform 0.9s ease-in-out;
   }
 
   .close_nav {
@@ -44,8 +47,13 @@
     height: 100%;
   }
 
+  nav ul li {
+    padding: 1.5rem;
+  }
+
   nav ul li a {
     padding: 0.3rem 0;
+    font-size: 1.2em;
   }
 
   .header_glass {
@@ -209,21 +217,24 @@
     margin-top: 5px;
   }
   nav {
-    display: none;
+    display: block;
     position: absolute;
+    right: 0;
+    height: 80%;
+    width: 30%;
     z-index: 50;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     background: rgb(24, 0, 36);
     background: linear-gradient(
       45deg,
-      rgba(24, 0, 36, 1) 6%,
-      rgb(141, 66, 161) 80%
+      rgba(24, 0, 36, 0.6) 6%,
+      rgba(141, 66, 161, 0.9) 80%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#c700ff",GradientType=1);
+    transform: translateX(200%);
+    transition: transform 0.9s ease-in-out;
   }
 
   .close_nav {
@@ -239,7 +250,8 @@
   }
 
   nav ul li a {
-    padding: 0.3rem 0;
+    padding: 0rem 0;
+    font-size: 0.8rem;
   }
 
   .header_glass {
