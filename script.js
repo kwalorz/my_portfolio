@@ -8,8 +8,8 @@ const overlay = document.querySelector(".overlay");
 
 navOpen.addEventListener("click", () => {
   navOpen.style.display = "none";
-  overlay.classList.add("overlay-blur");
   navBar.style.transform = "translateX(0%)";
+  overlay.classList.add("overlay-blur");
 });
 
 navClose.addEventListener("click", () => {
