@@ -10,14 +10,14 @@
 
   .fa-bars {
     display: block;
-    font-size: 4vh;
-    color: #fff;
-    margin-top: 5px;
+    position: absolute;
+    color: white;
+    font-size: 2rem;
   }
   nav {
     display: block;
     position: absolute;
-    top: 0;
+    margin: auto 0;
     right: 0;
     height: 80%;
     width: 50%;
@@ -25,12 +25,14 @@
     border-radius: 20px 0px 0px 20px;
     box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    background: rgb(24, 0, 36);
+    background: rgba(127, 51, 165, 1);
     background: linear-gradient(
       45deg,
-      rgba(24, 0, 36, 0.6) 6%,
-      rgba(141, 66, 161, 0.9) 80%
+      rgba(127, 51, 165, 1) 0%,
+      rgba(23, 120, 247, 1) 100%
     );
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#c700ff",GradientType=1);
     transform: translateX(200%);
     transition: transform 0.8s ease-in-out;
@@ -69,7 +71,12 @@
     box-shadow: none;
   }
 
+  .social_icons a {
+    font-size: 6vh;
+  }
+
   /****************Projects****************/
+
   .project_carousel-container {
     justify-content: space-between;
   }
@@ -206,33 +213,32 @@
   }
 }
 
-@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-device-width: 568px) and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   nav ul li {
     padding: 1.5rem 0;
   }
 
   .fa-bars {
     display: block;
-    font-size: 4vh;
+    font-size: 3vw;
     color: #fff;
     margin-top: 5px;
   }
   nav {
     display: block;
     position: absolute;
-    top: 0;
     right: 0;
     height: 80%;
     width: 30%;
     z-index: 50;
     border-radius: 20px 0px 0px 20px;
-    box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: -1px 1px 2px 1px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    background: rgb(24, 0, 36);
+    background: rgb(127, 51, 165);
     background: linear-gradient(
       45deg,
-      rgba(24, 0, 36, 0.6) 6%,
-      rgba(141, 66, 161, 0.9) 80%
+      rgb(127, 51, 165) 0%,
+      rgb(23, 120, 247) 100%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#180024",endColorstr="#c700ff",GradientType=1);
     transform: translateX(200%);
@@ -268,11 +274,34 @@
     box-shadow: none;
   }
 
+  .header_glass h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 4vw;
+    line-height: 1.5;
+  }
+
+  .header_glass p {
+    text-align: center;
+    max-width: 40ch;
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    font-size: 2vw;
+    line-height: 1.5;
+    margin: 1rem;
+  }
+
+  .social_icons a {
+    font-size: 5vw;
+    margin-bottom: 1rem;
+  }
+
   /***Projects***/
 
   .project_carousel-container {
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 40px;
   }
   .slider_btn {
     background: rgba(0, 0, 0, 0.4);
