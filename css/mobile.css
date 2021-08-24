@@ -24,11 +24,6 @@
     background-size: cover;
   }
 
-  .layer-top,
-  .layer-bottom {
-    animation: none;
-  }
-
   .fa-bars {
     display: block;
     position: absolute;

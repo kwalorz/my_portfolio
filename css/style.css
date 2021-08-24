@@ -36,14 +36,14 @@ header {
   background-image: url(../img/layered-waves-top.svg);
   position: absolute;
   top: 0;
-  animation: wave_right linear 15s infinite;
+  animation: wave_right linear 25s infinite;
 }
 
 .layer-bottom {
   background-image: url(../img/layered-waves-bottom.svg);
   position: absolute;
   bottom: 0;
-  animation: wave_left linear 15s infinite;
+  animation: wave_left linear 25s infinite;
 }
 
 @keyframes wave_right {
@@ -51,8 +51,12 @@ header {
     transform: translateX(0);
   }
 
-  100% {
+  50% {
     transform: translateX(25%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -61,8 +65,12 @@ header {
     transform: translateX(0);
   }
 
-  100% {
+  50% {
     transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
