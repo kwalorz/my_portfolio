@@ -210,6 +210,7 @@
           <h1>Contact Me</h1>
           <div class="contact-info">
             <form
+              id="consult"
               action="https://formsubmit.co/1ccfbfc31c68edcda3ad4404f958fd35"
               method="POST"
               enctype="multipart/form-data"
@@ -220,6 +221,7 @@
                 value="New Form Submission"
               />
               <label for="name">Name</label>
+              <span class="error-message err-name"></span>
               <input
                 type="text"
                 id="name"
@@ -228,6 +230,7 @@
                 required
               />
               <label for="email">Email</label>
+              <span class="error-message err-email"></span>
               <input
                 type="email"
                 id="email"
@@ -236,6 +239,7 @@
                 required
               />
               <label for="phone">Phone</label>
+              <span class="error-message err-phone"></span>
               <input
                 type="tel"
                 name="phone"

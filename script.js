@@ -110,3 +110,59 @@ window.addEventListener("DOMContentLoaded", () => {
     rotateCarousel();
   });
 });
+
+////////////////////////Form Validation///////////////////////////
+const form = document.querySelector("#consult");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = form.elements["name"];
+  const phoneNumber = form.elements["phone"];
+  const email = form.elements["email"];
+
+  function validateName() {
+    const msg = name.parentNode.querySelector(".err-name");
+
+    if (name.value === "") msg.innerText = "*Name Required";
+    if (name.value !== "") {
+      const nameValue = name.value.trim();
+      const onlyLetters = /^[a-z]+$/i;
+      !onlyLetters.test(nameValue)
+        ? (msg.innerText = "*Please enter a valid name")
+        : "";
+    }
+  }
+
+  function validatePhoneNum() {
+    const msg = phoneNumber.parentNode.querySelector(".err-phone");
+
+    if (phoneNumber.value === "" && email.value === "")
+      msg.innerText = "*Please enter either a phone number or email";
+    if (phoneNumber.value !== "") {
+      const phoneValue = phoneNumber.value.replace(/-/g, "").trim();
+      const onlyNumbers = /^[0-9]*$/;
+
+      if (!onlyNumbers.test(phoneValue) || phoneValue.length < 10)
+        msg.innerText = "*Please enter a valid phone number";
+    }
+  }
+
+  function validateEmail() {
+    const msg = email.parentNode.querySelector(".err-email");
+
+    if (phoneNumber.value === "" && email.value === "")
+      msg.innerText = "*Please enter either a phone number or email";
+    if (email.value !== "") {
+      const emailValue = email.value.trim();
+      const emailCheck = /^\S+@\S+\.\S+$/;
+
+      if (!emailCheck.test(emailValue))
+        msg.innerText = "*Please enter a valid email";
+    }
+  }
+
+  validateName();
+  validatePhoneNum();
+  validateEmail();
+});
